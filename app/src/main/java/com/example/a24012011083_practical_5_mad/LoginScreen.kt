@@ -115,6 +115,13 @@ fun LoginScreen(
         }
     }
 }
+fun navigateToRegister(navController: NavController) {
+    navController.navigate("register"){
+        popUpTo("login"){
+            inclusive = true
+        }
+    }
+}
 
 @Composable
 @Preview(showBackground = true)
