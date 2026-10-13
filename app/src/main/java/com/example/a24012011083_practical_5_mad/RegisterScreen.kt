@@ -123,25 +123,7 @@ fun RegisterScreen(
     }
 }
 
-@Composable
-fun FormField(
-    title: String,
-    value: String = "",
-    onTextChange: (String) -> Unit = {},
-    isPasswordField: Boolean = false
-) {
-    OutlinedTextField(
-        value = value,
-        onValueChange = onTextChange,
-        label = { Text(title) },
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 4.dp),
-        singleLine = true,
-        visualTransformation = if (isPasswordField) PasswordVisualTransformation() else VisualTransformation.None,
-        keyboardOptions = if (isPasswordField) KeyboardOptions(keyboardType = KeyboardType.Password) else KeyboardOptions.Default
-    )
-}
+
 
 @Composable
 @Preview(showBackground = true)
